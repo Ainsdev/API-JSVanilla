@@ -10,6 +10,7 @@
 //     }
 // });
 // //button dark mode
+
 window.onload = function async() {
     document.getElementById('top100').classList.remove('hidden');
 }
