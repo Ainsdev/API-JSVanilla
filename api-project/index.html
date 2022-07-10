@@ -1,17 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <!-- <div id="app"></div> -->
-    <div class="bg-red-500">
-      <h1 class="text-white">HELLO WORLD!</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto App</title>
+</head>
+
+<body class="bg-primary">
+  <header class="bg-secondary flex p-7 justify-between">
+    <div>
+      <h1 class="font-bold text-center">Crypto API</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cryptocurrency_Logo.svg/3888px-Cryptocurrency_Logo.svg.png"
+        alt="logo" class="max-h-14 max-w-14" />
     </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <div class="flex flex-col items-end justify-between">
+      <label class="inline relative items-center cursor-pointer" id="dark_btn">
+        <input type="checkbox" value="" class="sr-only peer">
+        <div
+          class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-white dark:peer-focus:ring-white rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black">
+        </div>
+      </label>
+      <nav>
+        <a id="top100_btn" href="#top100" class="text-black font-semibold px-2 underline">Top 100</a>
+        <a id="search_btn" href="#search" class="text-black font-semibold px-2 underline">Search</a>
+        <a id="historical_btn" href="#historical" class="text-black font-semibold px-2 underline">Historical</a>
+      </nav>
+    </div>
+  </header>
+  <main class="py-9  text-white">
+    <section id="top100" class="hidden">
+      <h1 class="text-center font-bold text-2xl mb-4">TOP 100</h1>
+      <article id="top100_content" class=" max-h-screen overflow-y-auto mx-2 rounded-2xl  bg-gradient-to-r from-tertiary via-secondary to-blue-700">
+        <div class="flex items-center justify-start p-3">
+          <div><img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579" width="20px" height="20px"></div>
+          <div class="text-center px-3">
+            <h1 class="font-light text-sm">Name:</h1>
+            <p class="font-bold text-base">Bitcoin</p>
+          </div>
+          <div class="border-l-2 border-white flex flex-col items-center justify-center px-3">
+              <h1 class="font-light text-sm">Last Price:</h1>
+              <p class="font-bold text-base">$21653</p>
+          </div>
+          <div class="border-l-2 border-white flex flex-col items-center justify-center px-3">
+          <h1 class="font-light text-sm">MarketCap:</h1>
+          <p class="font-bold text-base">412.3bill</p>
+        </div>
+          <div class="border-l-2 border-white flex flex-col items-center justify-center px-3">
+          <h1 class="font-light text-sm">% from ath:</h1>
+          <p class="font-bold text-base">68%</p>
+        </div>
+        </div>
+      </article>
+    </section>
+    <section id="search" class="hidden">
+      <h1>search</h1>
+    </section>
+    <section id="historical" class="hidden">
+      <h1>Historical</h1>
+    </section>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
