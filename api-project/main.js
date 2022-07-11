@@ -11,8 +11,11 @@
 // });
 // //button dark mode
 
+import { itemToTop } from "./app";
+
 window.onload = function async() {
     document.getElementById('top100').classList.remove('hidden');
+    itemToTop();
 }
 //btns
 const top100Btn = document.getElementById('top100_btn');
