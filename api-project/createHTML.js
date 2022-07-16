@@ -1,8 +1,8 @@
 //
 //Function to create HTML top 100
-export  function createItem(res, id) {
-    let div = document.createElement('div');
-    div.innerHTML = `<article id="${id}" class=" max-h-screen snap-center m-2 rounded-2xl bg-gradient-to-r from-tertiary via-secondary to-blue-700">
+export function createItem(res, id) {
+  let div = document.createElement('div');
+  div.innerHTML = `<article id="${id}" class=" max-h-screen snap-center m-2 rounded-2xl bg-gradient-to-r from-tertiary via-secondary to-blue-700 md:mx-32 ">
         <div class="flex items-center justify-center p-3">
           <div><img src="${res.image}" width="20px" height="20px"></div>
           <div class="text-center px-3">
@@ -23,13 +23,13 @@ export  function createItem(res, id) {
         </div>
         </div>
       </article>`;
-    return document.getElementById('top100').appendChild(div);
+  return document.getElementById('top100').appendChild(div);
 }
 //Api call to get data of  search
 export function createItemSearch(res, name) {
   if (res !== undefined) {
     let div = document.createElement('div');
-    div.innerHTML = `<article class=" max-h-screen snap-center m-2 rounded-2xl  bg-gradient-to-r from-tertiary via-secondary to-blue-700">
+    div.innerHTML = `<article class=" max-h-screen snap-center m-2 rounded-2xl  bg-gradient-to-r from-tertiary via-secondary to-blue-700 md:mx-32">
         <div class="flex items-center justify-center p-3">
           <div class="text-center px-3">
             <h1 class="font-light text-sm">Name:</h1>
@@ -46,12 +46,12 @@ export function createItemSearch(res, name) {
         </div>
       </article>`;
     return document.getElementById('search').appendChild(div);
-  } else{
+  } else {
     console.log("No data");
   }
 }
 //Api call to get data of  search-historical
-export function createItemHist(res,currency,date){
+export function createItemHist(res, currency, date) {
   let div = document.createElement('div');
   div.innerHTML = `<article id="${id}" class=" max-h-screen snap-center m-2 rounded-2xl bg-gradient-to-r from-tertiary via-secondary to-blue-700">
         <div class="flex items-center justify-center p-3">
