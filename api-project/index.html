@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-primary">
-  <header class="bg-secondary flex p-7 justify-between">
+  <header class="bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 flex p-7 justify-between sticky top-0">
     <div>
       <h1 class="font-bold text-center">Crypto API</h1>
       <img
@@ -25,9 +25,9 @@
         </div>
       </label>
       <nav>
-        <a id="top100_btn" href="#top100" class="text-black font-semibold px-2 underline">Top 100</a>
-        <a id="search_btn" href="#search" class="text-black font-semibold px-2 underline">Search</a>
-        <a id="historical_btn" href="#historical" class="text-black font-semibold px-2 underline">Historical</a>
+        <a id="top100_btn" href="#top100" class="text-white font-bold px-2 drop-shadow-xl">Top 100</a>
+        <a id="search_btn" href="#search" class="text-white font-bold px-2 drop-shadow-xl">Search</a>
+        <a id="historical_btn" href="#historical" class="text-white font-bold px-2 drop-shadow-xl">Historical</a>
       </nav>
     </div>
   </header>
@@ -36,10 +36,51 @@
       <h1 class="text-center font-bold text-2xl mb-4">TOP 100</h1>
     </section>
     <section id="search" class="hidden">
-      <h1>search</h1>
+      <h1 class="text-center font-bold text-2xl mb-4">Search by name</h1>
+      <div class="flex flex-col justify-center items-center">
+        <form class="py-16 px-16 w-screen text-center flex justify-center">
+          <input id="input" class="rounded-full h-12 w-[80%] text-center text-black" placeholder="Search a coin..."
+            type="text">
+          <button id="input_btn"
+            class="bg-tertiary hover:bg-secondary text-white font-bold mx-1 py-2 px-4 border border-blue-700 rounded-full"
+            type="submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+      </div>
     </section>
     <section id="historical" class="hidden">
-      <h1>Historical</h1>
+      <h1 class="text-center font-bold text-2xl mb-4">Historical</h1>
+      <div class="flex flex-col justify-center items-center">
+        <form class="py-16 px-16 w-screen text-center flex justify-center">
+          <input id="input_text_hist" class="px-2 rounded-lg h-12 w-[60%] text-center text-black"
+            placeholder="Search a coin..." type="search">
+          <input id="input_date_hist" class="mx-5 px-2 rounded-lg h-12 w-[25%] text-center text-black"
+            placeholder="Search a coin..." type="date">
+          <div class="flex flex-col w-[20%] px-6">
+            <label for="currency">Currency:</label>
+            <select id="input_currency_hist" name="currency" class="px-2 rounded-lg text-center text-black">
+              <option selected="selected" value="usd">USD</option>
+              <option value="clp">CLP</option>
+              <option value="eur">EUR</option>
+              <option value="ars">ARS</option>
+            </select>
+          </div>
+          <button id="input_hist_btn"
+            class="bg-tertiary hover:bg-secondary text-white font-bold mx-1 py-2 px-4 border border-blue-700 rounded-lg"
+            type="submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+      </div>
     </section>
   </main>
   <script type="module" src="/main.js"></script>
