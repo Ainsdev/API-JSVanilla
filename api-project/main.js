@@ -11,7 +11,7 @@
 // });
 // //button dark mode
 
-import { itemToTop } from "./app";
+import { itemToTop, searchCoin, searchHistDataCoin } from "./app";
 
 window.onload = function async() {
     document.getElementById('top100').classList.remove('hidden');
@@ -44,4 +44,35 @@ historicalBtn.addEventListener('click', () => {
     document.getElementById('search').classList.add('hidden');
 })
 //functions NAV
+//function of searching by name
+const button = document.getElementById('input_btn');
+const input = document.getElementById('input');
+//click on button
+button.addEventListener('click', () => {
+    searchCoin(input.value);
+    input.value = '';
+});
+//enter key
+input.addEventListener('keyup', (e) => {
+    if (e.key == 'Enter') {
+        searchCoin(input.value);
+        input.value = '';
+    }
+});
+//function of searching historical data by name
+const buttonHistorical = document.getElementById('input_hist_btn');
+const inputTextHistorical = document.getElementById('input_text_hist');
+const inputDateHist = document.getElementById('input_date_hist');
+const inputCurrencyHist = document.getElementById('input_currency_hist');
+    //click on button
+buttonHistorical.addEventListener('click', () => {
+    searchHistDataCoin(inputTextHistorical.value,inputCurrencyHist.value,inputDateHist.value);
+});
+    //enter key
+inputDateHist.addEventListener('keyup', (e) => {
+    if (e.key == 'Enter') {
+        searchHistDataCoin(inputTextHistorical.value, inputCurrencyHist.value, inputDateHist.value);
+    }
+});
+
 
