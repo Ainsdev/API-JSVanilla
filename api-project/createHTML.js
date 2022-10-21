@@ -2,7 +2,7 @@
 //Function to create HTML top 100
 export function createItem(res, id) {
   let div = document.createElement('div');
-  div.innerHTML = `<article id="${id}" class=" max-h-screen snap-center m-2 rounded-2xl bg-gradient-to-r from-tertiary via-secondary to-blue-700 md:mx-32 ">
+  div.innerHTML = `<article id="${id}" class="w-screen max-h-screen snap-center m-2 rounded-2xl bg-gradient-to-r from-tertiary via-secondary to-blue-700 md:mx-48 ">
         <div class="flex items-center justify-center p-3">
           <div><img src="${res.image}" width="20px" height="20px"></div>
           <div class="text-center px-3">

@@ -1,16 +1,3 @@
-// //button dark mode
-// const darkBtn = document.getElementById('dark_btn');
-// const html = document.getElementById('html');
-// darkBtn.addEventListener('click', () => {
-//     if (html.classList.contains('dark') == true) {
-//         html.classList.remove('dark');
-//         console.log('dark mode off');
-//     } else{
-//         html.classList.add('dark');
-//     }
-// });
-// //button dark mode
-
 import { itemToTop, searchCoin, searchHistDataCoin } from "./app";
 
 window.onload = function async() {
@@ -48,12 +35,14 @@ historicalBtn.addEventListener('click', () => {
 const button = document.getElementById('input_btn');
 const input = document.getElementById('input');
 //click on button
-button.addEventListener('click', () => {
+button.addEventListener('click', (e) => {
+    e.preventDefault();
     searchCoin(input.value);
     input.value = '';
 });
 //enter key
 input.addEventListener('keyup', (e) => {
+    e.preventDefault();
     if (e.key == 'Enter') {
         searchCoin(input.value);
         input.value = '';
@@ -65,11 +54,13 @@ const inputTextHistorical = document.getElementById('input_text_hist');
 const inputDateHist = document.getElementById('input_date_hist');
 const inputCurrencyHist = document.getElementById('input_currency_hist');
     //click on button
-buttonHistorical.addEventListener('click', () => {
+buttonHistorical.addEventListener('click', (e) => {
+    e.preventDefault();
     searchHistDataCoin(inputTextHistorical.value,inputCurrencyHist.value,inputDateHist.value);
 });
     //enter key
 inputDateHist.addEventListener('keyup', (e) => {
+    e.preventDefault();
     if (e.key == 'Enter') {
         searchHistDataCoin(inputTextHistorical.value, inputCurrencyHist.value, inputDateHist.value);
     }
